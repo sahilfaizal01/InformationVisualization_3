@@ -4,6 +4,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import dash
+import os
 from dash import dcc, html, Input, Output
 
 # Loading the cleaned data
@@ -182,5 +183,6 @@ def update_graph(selected_age_range, selected_genders, selected_stress_levels, s
 server = app.server
 
 # Running the app
-if __name__ == '__main__':
-    app.run_server(debug=True)
+if __name__ == '__main__':    
+    port = int(os.getenv("PORT", "10000"))  # Default to 10000 if PORT is not set
+    app.run_server(host="0.0.0.0", port=port, debug=True)
