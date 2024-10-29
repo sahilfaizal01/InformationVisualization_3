@@ -7,7 +7,7 @@ import dash
 from dash import dcc, html, Input, Output
 
 # Loading the cleaned data
-df = pd.read_csv('assignment_3/cleaned_df.csv')
+df = pd.read_csv('cleaned_df.csv')
 
 # Creating the Dash app
 app = dash.Dash(__name__)
