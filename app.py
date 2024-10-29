@@ -179,6 +179,8 @@ def update_graph(selected_age_range, selected_genders, selected_stress_levels, s
 
     return fig
 
+server = app.server
+
 # Running the app
 if __name__ == '__main__':
     app.run_server(debug=True)
